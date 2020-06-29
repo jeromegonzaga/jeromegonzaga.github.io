@@ -2,6 +2,7 @@
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
 
+
     {% if site.google_analytics %}
       <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
       <script>
@@ -20,8 +21,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   </head>
+
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
+      
+      
 
     <header class="page-header" role="banner">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
@@ -39,8 +43,12 @@
 -->
 
     </header>
+      
+
 
     <div class="header" id="myHeader">
+      <div id="header">Jerome Gonzaga</div>
+      <div id="header-2">Data Science Portfolio</div>
     <center>
         <a href="index.html" class="btn">Home</a>
         <a href="projects.html" class="btn">Projects</a>
@@ -77,6 +85,26 @@
             header.classList.add("sticky");
           } else {
             header.classList.remove("sticky");
+          }
+            
+          if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+            document.getElementById("header").style.fontSize = "30px";
+            document.getElementById("header").style.color = "white";
+//            document.getElementById("page-header").style.color = "transparent";
+          } else {
+            document.getElementById("header").style.fontSize = "30px";
+            document.getElementById("header").style.color = "transparent";
+//            document.getElementById("page-header").style.color = "white";
+          }
+            
+          if (document.body.scrollTop > 110 || document.documentElement.scrollTop > 110) {
+            document.getElementById("header-2").style.fontSize = "20px";
+            document.getElementById("header-2").style.color = "white";
+//            document.getElementById("page-header").style.color = "transparent";
+          } else {
+            document.getElementById("header-2").style.fontSize = "20px";
+            document.getElementById("header-2").style.color = "transparent";
+//            document.getElementById("page-header").style.color = "white";
           }
         }
     </script>
